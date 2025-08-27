@@ -11,6 +11,8 @@ import { InfoModal } from './components/modals/InfoModal'
 import { StatsModal } from './components/modals/StatsModal'
 import { SettingsModal } from './components/modals/SettingsModal'
 import { TipsModal } from './components/modals/TipsModal'
+import { WORDS } from './constants/wordlist'
+import { NOT_A_CYTOKINE_MESSAGE } from './constants/strings'
 
 import {
   GAME_TITLE,
@@ -207,6 +209,10 @@ function App() {
       return showErrorAlert(WORD_NOT_FOUND_MESSAGE, {
         onClose: clearCurrentRowClass,
       })
+    }
+
+    if (!WORDS.includes(currentGuess)) {
+      showErrorAlert(NOT_A_CYTOKINE_MESSAGE)
     }
 
     // enforce hard mode - all guesses must contain all previously revealed letters

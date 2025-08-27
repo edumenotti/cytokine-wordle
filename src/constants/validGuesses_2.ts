@@ -1,4 +1,4 @@
-export const WORDS = [
+export const VALID_GUESSES = [
   "IGF1-",
   "EPO--",
   "IL4--",
