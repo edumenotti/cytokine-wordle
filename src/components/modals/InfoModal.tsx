@@ -10,7 +10,7 @@ export const InfoModal = ({ isOpen, handleClose }: Props) => {
   return (
     <BaseModal title="How to play" isOpen={isOpen} handleClose={handleClose}>
       <p className="text-sm text-gray-500 dark:text-gray-300">
-        Wordle but for human genes!
+        Wordle but for cytokines genes!
       </p>
       <p className="text-sm text-gray-500 dark:text-gray-300 focus:outline-none">
         Use{' '}
@@ -28,9 +28,14 @@ export const InfoModal = ({ isOpen, handleClose }: Props) => {
         Genes with less than 5 characters are extended with "-".
       </p>
       <div className="flex justify-center mb-1 mt-4">
-        <Cell value="I" />
-        <Cell value="N" />
-        <Cell value="G" />
+        <Cell isRevealing={true} isCompleted={true} value="C" status="absent" />
+        <Cell isRevealing={true} isCompleted={true} value="C" status="absent" />
+        <Cell 
+	  isRevealing={true}
+          isCompleted={true}
+          value="L"
+          status="present"
+	/>
         <Cell
           isRevealing={true}
           isCompleted={true}
@@ -45,34 +50,79 @@ export const InfoModal = ({ isOpen, handleClose }: Props) => {
         />
       </div>
       <p className="text-sm text-gray-500 dark:text-gray-300">
-        The symbols 3 and - are in the gene name and in the correct spot.
+        The symbol L is in the gene name but in wrong spot. "-" and "3" are in the gene name and in the correct spot.
       </p>
 
       <div className="flex justify-center mb-1 mt-4">
-        <Cell value="N" />
-        <Cell value="L" />
-        <Cell value="R" />
         <Cell
           isRevealing={true}
           isCompleted={true}
-          value="P"
+          value="I"
+          status="correct"
+        />
+        <Cell
+          isRevealing={true}
+          isCompleted={true}
+          value="L"
+          status="correct"
+        />
+        <Cell
+          isRevealing={true}
+          isCompleted={true}
+          value="3"
+          status="present" 
+	/>
+        <Cell
+          isRevealing={true}
+          isCompleted={true}
+          value="1"
           status="present"
         />
-        <Cell value="1" />
+        <Cell
+          isRevealing={true}
+          isCompleted={true}
+          value="-"
+          status="correct"
+        />
       </div>
       <p className="text-sm text-gray-500 dark:text-gray-300">
-        The symbol P is in the gene name but in the wrong spot.
+        The symbols I and L are also the gene name in the correct spot. We discovered that "1" is in the gene name in the wrong spot.
       </p>
 
       <div className="flex justify-center mb-1 mt-4">
-        <Cell value="G" />
-        <Cell value="R" />
-        <Cell isRevealing={true} isCompleted={true} value="N" status="absent" />
-        <Cell value="-" />
-        <Cell value="-" />
+        <Cell
+          isRevealing={true}
+          isCompleted={true}
+          value="I"
+          status="correct"
+        />
+        <Cell
+          isRevealing={true}
+          isCompleted={true}
+          value="L"
+          status="correct"
+        />
+        <Cell
+          isRevealing={true}
+          isCompleted={true}
+          value="1"
+          status="correct"
+        />
+        <Cell
+          isRevealing={true}
+          isCompleted={true}
+          value="3"
+          status="correct"
+        />
+        <Cell
+          isRevealing={true}
+          isCompleted={true}
+          value="-"
+          status="correct"
+        />
       </div>
       <p className="text-sm text-gray-500 dark:text-gray-300">
-        The symbol N is not in the gene name in any spot.
+        By swaping 1 and 3, we discover that the gene is IL13!
       </p>
 
       <p className="mt-6 italic text-sm text-gray-500 dark:text-gray-300">

@@ -29,29 +29,33 @@ export const TipsModal = ({ isOpen, handleClose }: Props) => {
   return (
     <BaseModal title={TIPS_TITLE} isOpen={isOpen} handleClose={handleClose}>
       <br />
-      <p>The gene of the day {tip}</p>
+      <p className="text-slate-900 dark:text-slate-100">
+        The cytokine of the day {tip}
+      </p>
       <br />
-      <p className="text-lg font-large">Spoilers:</p>
+      <p className="text-lg font-semibold text-slate-700 dark:text-slate-300">
+        Spoilers:
+      </p>
       <br />
       <a
-        className="text-lg font-medium  dark:text-gray-100 text-green-600 hover:text-yellow-600"
+        className="text-lg font-medium text-green-700 dark:text-green-300 hover:text-yellow-700 dark:hover:text-yellow-300"
         target="_blank"
         rel="noreferrer"
         href={wikipediaPage}
       >
         {' '}
-        Read about the gene of the day on Wikipedia
+        Read about the cytokine of the day on Wikipedia
       </a>
       <br />
       <br />
       <a
-        className="text-lg leading-6 font-medium text-gray-900 dark:text-gray-100 text-green-600 hover:text-yellow-600"
+        className="text-lg leading-6 font-medium text-green-700 dark:text-green-300 hover:text-yellow-700 dark:hover:text-yellow-300"
         target="_blank"
         rel="noreferrer"
         href={gene_cards}
       >
         {' '}
-        Read about the gene of the day on Gene Cards
+        Read about the cytokine of the day on GeneCards
       </a>
       <br />
     </BaseModal>

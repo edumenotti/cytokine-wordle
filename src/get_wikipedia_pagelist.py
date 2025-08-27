@@ -55,5 +55,5 @@ for result in data["results"]["bindings"]:
       wikipedia_pages[fixed_name] = "None"
 
 
-with open("src/constants/wikipedialist.json", "w+") as f:
+with open("constants/wikipedialist.json", "w+") as f:
     f.write(json.dumps(wikipedia_pages,indent=4))

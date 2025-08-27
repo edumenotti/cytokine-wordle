@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
   <head>
     <meta charset="utf-8" />
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
@@ -64,6 +65,71 @@
       src="https://plausible.io/js/plausible.js"
     ></script>
     <% } %>
+    <style>
+      .lab-credit {
+        text-align: center;
+        margin-top: 8px;
+        color: #0f172a; /* slate-900 */
+        font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+      }
+      .dark .lab-credit { color: #e5e7eb; } /* slate-200 */
+
+      .lab-logo-wrap {
+        display: flex;
+        justify-content: center;
+        margin-top: 16px; /* ↑ ajuste o espaçamento aqui */
+      }
+      .lab-logo {
+        max-width: 240px; /* ajuste o tamanho do logo aqui */
+        height: auto;
+        display: inline-block;
+        vertical-align: middle;
+      }
+  /* Alternância claro/escuro usando a classe .dark na raiz */
+      .lab-logo-dark { display: none; }
+      .dark .lab-logo-light { display: none; }
+      .dark .lab-logo-dark { display: inline-block; }
+    </style>
+    <style>
+      /* Texto geral dos créditos */
+      .credit {
+        text-align: center;
+        color: #0f172a;
+        margin-top: 8px;
+      }
+      .credit span { font-variant-numeric: slashed-zero; }
+
+      .dark .credit { color: #e5e7eb; }
+
+      .link-wikidata       { color: rgb(48,113,173); }
+      .dark .link-wikidata { color: #93c5fd; }
+
+      .link-tiago          { color: lightcoral; }
+      .dark .link-tiago    { color: #fca5a5; }
+
+      .link-edu            { color: mediumseagreen; }
+      .dark .link-edu      { color: #86efac; }
+
+      .link-lab            { color: rgb(21,121,91); } 
+      .dark .link-lab      { color: #34d399; }         
+
+      .credit a:hover,
+      .credit a:focus { text-decoration: underline; }
+
+      .tips-text {
+        color: #0f172a; /* claro: slate-900 */
+      }
+      .dark .tips-text {
+        color: #e5e7eb; /* escuro: slate-200 (já estava bom) */
+      }
+      .tips-label {
+        color: #334155; /* claro: slate-700 para 'Spoilers:' */
+        font-weight: 600;
+      }
+      .dark .tips-label {
+        color: #cbd5e1; /* escuro: slate-300 */
+      }
+    </style>
   </head>
 
   <body>
@@ -79,37 +145,59 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
-    <div style="text-align: center">
-      <span class="text-muted" style="font-variant-numeric: slashed-zero">
+    <div class="credit">
+      <span>
         HGNC gene names obtained from
         <a
+          class="link-wikidata"
           target="_blank"
           rel="noreferrer"
           href="https://www.wikidata.org"
-          style="color: rgb(48, 113, 173)"
-          >Wikidata</a
-        ></span
-      >
+        >Wikidata</a>
+      </span>
     </div>
-    <div style="text-align: center">
-      <span class="text-muted" style="font-variant-numeric: slashed-zero"
-        >With ♥ by
+
+    <div class="credit">
+      <span>
+        Adapted from
         <a
+          class="link-tiago"
           target="_blank"
           rel="noreferrer"
           href="https://github.com/lubianat/gene-wordle"
-          style="color: lightcoral"
-          >Tiago Lubiana</a
-        >
-        at
+        >Tiago Lubiana</a>
+        by
         <a
+          class="link-edu"
           target="_blank"
           rel="noreferrer"
-          href="https://www.csbiology.org"
-          style="color: rgb(21, 121, 91)"
-          >csbiology.org</a
-        ></span
-      >
+          href="https://github.com/edumenotti/cytokine-wordle"
+        >Eduardo Menotti</a>
+        at
+        <a
+          class="link-lab"
+          target="_blank"
+          rel="noreferrer"
+          href="https://lamarchelab.com/"
+        >lamarchelab.com</a>
+      </span>
     </div>
+    <div class="lab-logo-wrap" style="margin-top: 48px;">
+      <a href="https://lamarchelab.com" target="_blank" rel="noreferrer">
+        <img
+          src="%PUBLIC_URL%/lablogo_light.png"
+          alt="LaMarche Lab"
+          class="lab-logo lab-logo-light"
+          loading="lazy"
+        />
+	<img
+          src="%PUBLIC_URL%/lablogo_dark.png"
+          alt="LaMarche Lab"
+          class="lab-logo lab-logo-dark"
+          loading="lazy"
+	/>
+      </a>
+    </div>
+   
   </body>
 </html>
