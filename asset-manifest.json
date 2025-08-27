@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/cytokine-wordle/static/css/main.d8a51da6.css",
-    "main.js": "/cytokine-wordle/static/js/main.1892585e.js",
+    "main.css": "/cytokine-wordle/static/css/main.4afde8fe.css",
+    "main.js": "/cytokine-wordle/static/js/main.7ec8ebf3.js",
     "static/js/453.bb625672.chunk.js": "/cytokine-wordle/static/js/453.bb625672.chunk.js",
     "index.html": "/cytokine-wordle/index.html",
-    "main.d8a51da6.css.map": "/cytokine-wordle/static/css/main.d8a51da6.css.map",
-    "main.1892585e.js.map": "/cytokine-wordle/static/js/main.1892585e.js.map",
+    "main.4afde8fe.css.map": "/cytokine-wordle/static/css/main.4afde8fe.css.map",
+    "main.7ec8ebf3.js.map": "/cytokine-wordle/static/js/main.7ec8ebf3.js.map",
     "453.bb625672.chunk.js.map": "/cytokine-wordle/static/js/453.bb625672.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.d8a51da6.css",
-    "static/js/main.1892585e.js"
+    "static/css/main.4afde8fe.css",
+    "static/js/main.7ec8ebf3.js"
   ]
 }
