@@ -1,5 +1,5 @@
 export const GAME_TITLE = process.env.REACT_APP_GAME_NAME!
-export const WEBSITE = 'geneofthe.day'
+export const WEBSITE = 'cytokine of the day'
 
 export const WIN_MESSAGES = ['Great Job!', 'Awesome', 'Well done!']
 export const GAME_COPIED_MESSAGE = 'Game copied to clipboard'
